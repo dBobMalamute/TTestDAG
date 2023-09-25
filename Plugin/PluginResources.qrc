@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/NumberDisplay.png</file>
+        <file>QML/NumberDisplayMinimized.qml</file>
+        <file>Icons/NumberInput.png</file>
+        <file>QML/NumberInputMinimized.qml</file>
+        <file>Icons/TextArea.png</file>
+        <file>Icons/NumbersMean.png</file>
+        <file>QML/NumbersMeanIdea.qml</file>
+        <file>QML/NumbersStatistic.qml</file>
+        <file>QML/SpeedControl.qml</file>
+        <file>QML/TextAreaIdea.qml</file>
+        <file>QML/TextControls.qml</file>
+        <file>QML/NumbersInputIdea.qml</file>
+        <file>Icons/NumbersInput.png</file>
+        <file>QML/QMLTemplates/StatisticTemplate.qml</file>
+        <file>QML/NumbersMeanIdeaDot.qml</file>
+        <file>Images/MeanGrid.png</file>
+        <file>Icons/GaussianDistribution.png</file>
+        <file>QML/GaussianDistributionIdea.qml</file>
+        <file>QML/QMLTemplates/DistributionDisplay.qml</file>
+        <file>Images/GridLines.png</file>
+        <file>QML/DistributionSamplerIdea.qml</file>
+        <file>QML/DistributionSamplerMinimized.qml</file>
+        <file>Icons/DistributionSampler.png</file>
+        <file>Images/Pencil.png</file>
+        <file>QML/QMLTemplates/SamplerTemplate.qml</file>
+        <file>QML/DistributionSamplerDot.qml</file>
+        <file>Icons/OneSampleOneSidedTTest.png</file>
+        <file>QML/OneSampleOneSidedTTest.qml</file>
+        <file>QML/TTestMinimized.qml</file>
+        <file>QML/TTestSpeedControl.qml</file>
+        <file>QML/QMLTemplates/StatisticalTestMinimized.qml</file>
+        <file>QML/QMLTemplates/StatisticalTestTemplate.qml</file>
+        <file>QML/QMLTemplates/BridgeRailings.qml</file>
+        <file>Images/DistributionBackground.png</file>
+        <file>QML/TTestDotv2.qml</file>
+        <file>QML/TValueBar.qml</file>
+        <file>DemoFiles/TTest.mutt</file>
+    </qresource>
+</RCC>
