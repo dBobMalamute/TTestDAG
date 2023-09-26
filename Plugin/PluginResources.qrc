@@ -36,6 +36,7 @@
         <file>Images/DistributionBackground.png</file>
         <file>QML/TTestDotv2.qml</file>
         <file>QML/TValueBar.qml</file>
-        <file>DemoFiles/TTest.mutt</file>
+        <file>DemoFiles/TTestWasmLoadFile.mutt</file>
+        <file>DemoFiles/Test.mutt</file>
     </qresource>
 </RCC>

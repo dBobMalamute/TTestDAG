@@ -989,8 +989,7 @@ qrc_MalamuteCoreResources.cpp: MalamuteCore/MalamuteCoreResources.qrc \
 		MalamuteCore/Images/CloseIcon.png \
 		MalamuteCore/Images/BrushedSteel.jpg \
 		MalamuteCore/Images/StylizedCursor2.png \
-		MalamuteCore/Images/BlankCursor.png \
-		MalamuteCore/Images/Blank.png
+		MalamuteCore/Images/BlankCursor.png
 	/home/dbob/Qt/5.15.2/wasm_32/bin/rcc -name MalamuteCoreResources MalamuteCore/MalamuteCoreResources.qrc -o qrc_MalamuteCoreResources.cpp
 
 qrc_PluginResources.cpp: Plugin/PluginResources.qrc \
@@ -1027,7 +1026,8 @@ qrc_PluginResources.cpp: Plugin/PluginResources.qrc \
 		Plugin/Icons/NumberInput.png \
 		Plugin/Icons/NumberDisplay.png \
 		Plugin/Icons/TextArea.png \
-		Plugin/DemoFiles/TTest.mutt \
+		Plugin/DemoFiles/TTestWasmLoadFile.mutt \
+		Plugin/DemoFiles/Test.mutt \
 		Plugin/Images/MeanGrid.png \
 		Plugin/Images/DistributionBackground.png \
 		Plugin/Images/Pencil.png \
