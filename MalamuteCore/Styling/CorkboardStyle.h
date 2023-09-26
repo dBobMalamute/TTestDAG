@@ -17,7 +17,7 @@ public:
     Q_INVOKABLE QColor backgroundTintColor() const;
 
 private:
-    QColor m_selectionRectangleColor = QColor(0xcc5708);
+    QColor m_selectionRectangleColor = QColor("teal");
     int m_selectionRectangleWidth = 4;
     int m_selectionRectangleRadius = 4;
 

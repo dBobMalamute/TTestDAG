@@ -9,6 +9,21 @@ MalamuteCasing
     width: casingSize.width + 1.4 * 15 + 10;
     height: casingSize.height + 0.4 * 15;
 
+    RectangularGlow
+    {
+        id: effect
+        width: selected ? frameRect.width + 14 : frameRect.width + 2
+        height: selected ? frameRect.height + 14 : frameRect.height + 2
+        anchors.centerIn: frameRect
+        opacity: selected ? 1.0 : 0.2
+
+        glowRadius: CasingStyle.glowRadius()
+        spread: CasingStyle.glowSpread()
+        color: "teal"
+        cornerRadius: frameRect.radius + CasingStyle.glowRadius()
+        z: frameRect.z - 2
+    }
+
     Rectangle
     {
         id: frameRect
@@ -116,7 +131,7 @@ MalamuteCasing
                 {
                     id: name
                     anchors.centerIn: parent
-                    color: "#00a949"
+                    color: selected ? "#4df64d" : Qt.lighter("#4df64d", 1.3)
                     font: CasingStyle.nameFont()
                     horizontalAlignment: Text.AlignHCenter
                     text: ideaName
@@ -246,14 +261,20 @@ MalamuteCasing
         }
         Rectangle
         {
-            //color: validationColor
-            radius: CasingStyle.frameRadius();
-
             gradient: Gradient
             {
                 GradientStop{position: 0.05; color: "#181818"}
                 GradientStop{position: 0.95; color: "#5b5b5b"}
             }
+
+            //color: validationColor
+            radius: frameRect.radius;
+
+            y: validationBoxTop - 2
+            anchors.left: frameRect.left;
+            width: frameRect.width
+            height: validationBoxSize.height === 0 ? 0 : validationBoxSize.height + 2*5 + 2*border.width + 4
+
             Rectangle
             {
                 width: parent.width - 8
@@ -266,23 +287,35 @@ MalamuteCasing
                     GradientStop{position: 0.05; color: "#5b5b5b"}
                     GradientStop{position: 0.95; color: "#333333"}
                 }
+
+                Rectangle
+                {
+                    width: parent.width - 8
+                    height: parent.height - 8
+                    anchors.centerIn: parent
+
+                    radius: parent.radius
+                    gradient: Gradient
+                    {
+                        GradientStop{position: 0.05; color: Qt.darker(validationColor, 1.15)}
+                        GradientStop{position: 0.5; color: validationColor}
+                        GradientStop{position: 0.95; color: Qt.darker(validationColor, 1.15)}
+                    }
+                    color: validationColor
+                    Text
+                    {
+                        id: validatationMessageDisplay
+                        color: CasingStyle.validationTextColor();
+                        font: CasingStyle.validationTextFont();
+                        horizontalAlignment: Text.AlignHCenter
+                        anchors.centerIn: parent
+                        text: validationMessage
+                    }
+                }
             }
 
 
-            y: validationBoxTop
-            anchors.left: frameRect.left;
-            width: frameRect.width
-            height: validationBoxSize.height === 0 ? 0 : validationBoxSize.height + 2*5 + 2*border.width
 
-            Text
-            {
-                id: validatationMessageDisplay
-                color: validationColor
-                font: CasingStyle.validationTextFont();
-                horizontalAlignment: Text.AlignHCenter
-                anchors.centerIn: parent
-                text: validationMessage
-            }
         }
     }
 

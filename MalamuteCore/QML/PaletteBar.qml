@@ -9,8 +9,8 @@ ToolBar
     background: Rectangle
     {
         anchors.fill: parent
-        color: "#C19A6B";
-        border.color: Qt.darker(color,1.3);
+        color: "#333333";
+        border.color: "black"
         border.width: 2
     }
     ComboBox

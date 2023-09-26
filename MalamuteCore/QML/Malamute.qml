@@ -477,7 +477,7 @@ ApplicationWindow
             id: selectionRectangle
             border.color: CorkboardStyle.selectionRectangleColor()
             border.width: CorkboardStyle.selectionRectangleWidth()
-            color: "transparent"
+            color: "#1a008080"
             visible: corkboard.selecting
             radius: CorkboardStyle.selectionRectangleRadius()
             z: 1

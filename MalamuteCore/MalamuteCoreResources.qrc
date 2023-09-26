@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Images/CloseIcon.png</file>
-        <file>Images/Blank.png</file>
         <file>QML/Wire.qml</file>
         <file>QML/PaletteToolTip.qml</file>
         <file>QML/StopLight.qml</file>

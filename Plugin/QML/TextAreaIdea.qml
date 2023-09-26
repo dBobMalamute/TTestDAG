@@ -12,13 +12,8 @@ FocusScope
     Rectangle
     {
         anchors.fill: parent
-        radius: 4
-
-        gradient: Gradient
-        {
-            GradientStop{position: 0.0; color: "#ead0b4"}
-            GradientStop{position: 1.0; color: "#ddb284"}
-        }
+        radius: 10
+        color: "black"
     }
     TextEdit
     {
@@ -27,7 +22,8 @@ FocusScope
         font.bold: idea.bold
         font.pointSize: idea.fontSize
         font.family: "verdana"
-        color: "#1a1a1a"
+        //color: "#1a1a1a"
+        color: "#08dbdb"
         selectByMouse: true
         text: idea.text
 
@@ -38,9 +34,10 @@ FocusScope
 
         onActiveFocusChanged:
         {
-            if(textEdit.text === 'text\ntext' && textEdit.focus === true)
+            console.log("Active lost");
+            if(textEdit.text === 'text\ntext' && textEdit.activeFocus === true)
                 textEdit.text = '';
-            if(textEdit.text === '' && textEdit.focus === false)
+            if(textEdit.text === '' && textEdit.activeFocus === false)
             {
                 textEdit.text = 'text\ntext'
                 idea.setText(textEdit.text)
